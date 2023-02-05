@@ -29,6 +29,9 @@ body {
 .create:hover i {
 scale: 1.15;
 }
+.storage i {
+  cursor: pointer;
+}
 #store .item {
   cursor: pointer;
 }

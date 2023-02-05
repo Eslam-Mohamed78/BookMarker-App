@@ -1,8 +1,14 @@
 var sName = document.getElementById("name");
 var sUrl = document.getElementById("url");
 var addBtn = document.getElementById("create");
+var store = document.getElementById("store");
 
+// this test to the first time run app on any device (null)
 if (localStorage.getItem("items") == null) {
+  markContainer = [];
+  store.innerHTML = '<p class="text-center">Empty Storage</p>';
+} else if (localStorage.getItem("items") == "[]") {
+  store.innerHTML = '<p class="text-center">Empty Storage</p>';
   markContainer = [];
 } else {
   markContainer = JSON.parse(localStorage.getItem("items"));
@@ -48,7 +54,7 @@ function display() {
     // console.log(markContainer[i].sName[0].toLowerCase())
     // console.log(savedSites)
   }
-  document.getElementById("store").innerHTML = savedSites;
+  store.innerHTML = savedSites;
 }
 
 function remove(index) {
@@ -58,6 +64,13 @@ function remove(index) {
   localStorage.setItem("items", JSON.stringify(markContainer));
 
   display();
+
+  // not first time to run the app on the device =>> And localstorage is empty 
+  // so willnot be null but contain empty items array as string '[]'
+  if (localStorage.getItem("items") == "[]") {
+    markContainer = [];
+    store.innerHTML = '<p class="text-center">Empty Storage</p>';
+  }
 }
 
 function reset() {
