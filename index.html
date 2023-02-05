@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book-Marker App</title>
+    <!-- fav icon -->
+    <link
+      rel="shortcut icon"
+      href="./images/icons8-bookmark-96.png"
+      type="image/x-icon"
+    />
+    <!-- font awesome -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- main style -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container mt-4">
+      <div class="marker">
+        <h1 class="text-center my-5">
+          <span>Bookmark your favorite sites</span>
+        </h1>
+        <!-- I think it is better without label => placeholder is enough -->
+        <!-- <label for="name" class="fw-bold mb-2 fs-5">Site Name</label>  -->
+        <input
+          type="text"
+          name="s-name"
+          id="name"
+          placeholder="Bookmark Name"
+          required
+          class="form-control p-3 mb-4"
+        />
+
+        <!-- <label for="url" class="fw-bold mb-2 fs-5">Site URL</label> -->
+        <input
+          type="text"
+          name="s-url"
+          id="url"
+          placeholder="Website URL"
+          required
+          class="form-control p-3 mb-4"
+        />
+
+        <button
+          class="btn btn-success create shadow w-100"
+          
+          id="create"
+        >
+          <i class="fa-solid fa-folder-plus"></i>
+        </button>
+
+        <div class="card-body card mt-5 shadow" id="store"></div>
+
+        <script src="./js/bootstrap.bundle.min.js"></script>
+        <script src="./js/script.js"></script>
+      </div>
+    </div>
+  </body>
+</html>

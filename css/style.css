@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap");
+
+body {
+  background-color: #f3f5f9;
+  font-family: "Source Sans Pro", sans-serif;
+}
+.container {
+  width: 80%;
+}
+.marker h1 {
+	font-weight: 600;
+}
+.marker h1 span {
+  position: relative;
+}
+.marker h1 span::before {
+  content: '\f02e';
+  font-family: FontAwesome;
+  position: absolute;
+  color: green;
+  left: -45px;
+}
+.create {
+  font-size: 20px;
+}
+.create i {
+	transition: scale 0.35s ease;
+}
+.create:hover i {
+scale: 1.15;
+}
+#store .item {
+  cursor: pointer;
+}
+#store .item::after {
+  content: "";
+  position: absolute;
+  width: 85%;
+  bottom: -15px;
+  left: 10%;
+  border-bottom: 1px solid #dee2e6;
+}
+#store .logo::after {
+  content: "";
+  width: 1px;
+  height: 35px;
+  background-color: #dee2e6;
+  position: absolute;
+  left: 35px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#store .logo i {
+	font-size: 25px;
+	color: #559ee7;
+	font-weight: bolder;
+	transition: scale .3s ease;
+}
+#store .item span {
+	font-size: 20px;
+	font-weight: 600;
+	color: #559ee7;
+	transition: scale .35s ease;
+}
+#store .item:hover .logo i {
+  color: green;
+  scale: 1.3;
+}
+#store .item:hover span {
+  color: green;
+  scale: 1.3;
+}
+#store .visit:hover i {
+scale: 1.15;
+}
+#store .visit i {
+	transition: scale 0.3s ease;
+}
+#store .delete:hover i {
+scale: 1.15;
+}
+#store .delete i {
+	transition: scale 0.3s ease;
+}
